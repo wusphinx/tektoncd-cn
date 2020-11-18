@@ -13,7 +13,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Set up Python ${{ matrix.python-version }}
+      - name: Lint
         uses: azure/k8s-lint@v1
         with:
           lintType: dryrun
