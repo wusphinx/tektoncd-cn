@@ -11,5 +11,10 @@ spec:
   - name: run-test
     image: golang:1.13-alpine
     workingDir: /workspace/repo
+    env:
+      - name: "GO111MODULE"
+        value: "on"
+      - name: "GOPROXY"
+        value: "https://goproxy.cn,direct"
     command: ["go"]
-    args: ["test"]
+    args: ["mod", "download"]
